@@ -24,7 +24,7 @@ class People(models.Model):
 class Dispetchery(models.Model):
     Name = models.CharField("Имя", max_length=15)
     Sure_name = models.CharField("Фамилия", max_length=15)
-    Date_of_birth = models.CharField("Номер телефона", max_length=10)
+    Date_of_birth = models.CharField("Дата рождения", max_length=10)
     Number = models.CharField("Номер телефона", max_length=15)
     Created = models.DateTimeField("Дата регистрации", auto_now_add=True)
     Email = models.EmailField("email")
