@@ -1,7 +1,7 @@
 from rest_framework import viewsets 
 
-from .models import Voditeli, People, Dispetchery
-from .serializers import VoditeliSerializer, PeopleSerializer, DispetcherySerialzier
+from .models import Voditeli, People, Dispetchery, Order
+from .serializers import VoditeliSerializer, PeopleSerializer, DispetcherySerialzier, OrderSerializer
 
 
 class VoditeliViewSet(viewsets.ModelViewSet):
@@ -17,3 +17,8 @@ class PeopleViewSet(viewsets.ModelViewSet):
 class DispetcheryViewSet(viewsets.ModelViewSet):
     queryset = Dispetchery.objects.all()
     serializer_class = DispetcherySerialzier
+
+
+class OrderViewSet(viewsets.ModelViewSet):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer

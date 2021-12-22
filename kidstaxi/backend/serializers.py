@@ -1,6 +1,8 @@
+from django.db import models
 from rest_framework import serializers
+from rest_framework.relations import SlugRelatedField
 
-from .models import Voditeli, People, Dispetchery
+from .models import Voditeli, People, Dispetchery, Order
 
 
 class VoditeliSerializer(serializers.ModelSerializer):
@@ -19,3 +21,9 @@ class DispetcherySerialzier(serializers.ModelSerializer):
     class Meta:
         fields = "__all__"
         model = Dispetchery
+
+class OrderSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        fields = "__all__"
+        model = Order
