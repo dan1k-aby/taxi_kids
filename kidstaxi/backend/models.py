@@ -2,8 +2,7 @@ from django.db import models
 
 
 class Voditeli(models.Model):
-    Name_vod = models.CharField("Имя", max_length=15)
-    Sure_name = models.CharField("Фамилия", max_length=15)
+    Name_vod = models.CharField("Имя и Фамилия", max_length=30)
     Date_of_birth = models.CharField("Дата рождения", max_length=10)
     number = models.CharField("Номер телефона", max_length=20)
     Created = models.DateTimeField("Дата регистрации", auto_now_add=True)
@@ -15,8 +14,7 @@ class Voditeli(models.Model):
 
 
 class People(models.Model):
-    Name_man = models.CharField("Имя", max_length=15)
-    Sure_name = models.CharField("Фамилия", max_length=15)
+    Name_man = models.CharField("Имя и Фамилия", max_length=30)
     Number = models.CharField("Номер телефона", max_length=20)
     
     class Meta:
